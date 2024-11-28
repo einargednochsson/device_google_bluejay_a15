@@ -41,3 +41,10 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
+    
+# Camera
+$(call inherit-product-if-exists, vendor/google/camera/config.mk)
+    
+# PixelParts
+include packages/apps/PixelParts/device.mk
+
